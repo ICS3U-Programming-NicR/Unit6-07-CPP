@@ -22,14 +22,11 @@ using std::string;
 
 void stringParser(string sentence) {
     string word = "";
-    for (auto x : sentence) 
-    {
-        if (x == ' ')
-        {
+    for (auto x : sentence) {
+        if (x == ' ') {
             cout << word << "\n";
             word = "";
-        }
-        else {
+        } else {
             word = word + x;
         }
     }
@@ -45,7 +42,8 @@ int main() {
         cout  << "Enter the sentence you would like to parse: ";
         getline(cin, uString);
         stringParser(uString);
-        cout << "\nIf you would like to parse a sentence again just press <enter>: ";
+        cout << "\nIf you would like to parse a"\
+                "sentence again just press <enter>: ";
         if (cin.get() == '\n') {
             continue;
         } else if (cin.get() != '\n') {
